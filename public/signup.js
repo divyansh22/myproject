@@ -4,8 +4,8 @@ $(function () {
     let username = $('#username')
     let password=$('#password')
   
-    $('#submit').click(function () {
-      
+    $('#submit').click(function (e) {
+      	  e.preventDefault();
         addUser(
             firstname.val(),
             lastname.val(),
