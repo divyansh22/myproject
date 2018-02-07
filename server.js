@@ -12,6 +12,7 @@ app.use('/', express.static(path.join(__dirname, 'public')))
 })*/
 app.use('/routes/users',(req,res)=>{
     console.log("jhello")
+  res.send(req.body)
 })
 
 
