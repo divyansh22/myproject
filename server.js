@@ -10,10 +10,7 @@ app.use('/', express.static(path.join(__dirname, 'public')))
     //send the main page
     res.sendfile('public/index.html',{root:__dirname})
 })*/
-app.use('/routes/users',(req,res)=>{
-    console.log("jhello")
-  res.send(req.body)
-})
+app.use('/routes/users',require('./routes/users'));
 
 
 app.listen(3434,()=>{
